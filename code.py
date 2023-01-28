@@ -1,13 +1,8 @@
-# SPDX-FileCopyrightText: Copyright (c) 2021 David Glaude
-#
-# SPDX-License-Identifier: Unlicense
 import board
 import adafruit_st25dv16
 import busio
 
-#i2c = board.I2C()
 i2c = busio.I2C(board.GP1, board.GP0)
-
 eeprom = adafruit_st25dv16.EEPROM_I2C(i2c)
 
 # Value    Protocol
@@ -29,7 +24,6 @@ str="markmcgookin.com"
 #Goal: https://www.poureva.be/spip.php?article997
 #head=0x02
 #str="poureva.be/spip.php?article997"
-
 
 
 l=len(str)
